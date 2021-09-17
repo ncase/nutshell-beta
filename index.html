@@ -45,7 +45,7 @@
         <h2>How can I use Nutshell in my site?</h2>
 
         <p>
-            First, if you'd like, try it out online with <a href="try">this interactive demo!</a>
+            First, if you'd like, try it out online with <a href="try?v=2">this interactive demo!</a>
             (This demo uses Markdown, but you can use Nutshell with any word-editor you like,
             or directly in HTML)
         </p>
@@ -53,21 +53,31 @@
             <img src="pics/editor.gif" width="600" style="border: 1px solid #ddd;">
         </p>
         <p>
+            (<b>IMPORTANT NOTE:</b> If you're working in HTML, you can't just type "# Header"!
+            Markdown parsing is NOT built into Nutshell, it's just part of the above demo!
+            You have to actually put it in header tags like <code>&lt;h1&gt;Header&lt;/h1&gt;</code>.
+            Likewise, a link has to be <code>&lt;a href='#Header'&gt;:link&lt;/a&gt;</code>.
+            If you're working in a normal WYSIWYG text editor,
+            make headers and :links (with colons) as usual.)
+        </p>
+        <p>
             If you liked that, here's how to install Nutshell in your blog or website...
         </p>
         <p>
-            <b>Step 1:</b> Put this in a page's &lt;head&gt;:
+            <b>Step 1:</b> Put this in a page somewhere, preferably the &lt;head&gt;:
         </p>
 <input style="border:none; font-family:monospace; background:#333; color:#fff; border-radius: 2px; padding:2px 5px; font-size: 14.5px; width:100%"
-    value='&lt;script src="https://cdn.jsdelivr.net/gh/ncase/nutshell-beta@0.0.2/nutshell.js"&gt;&lt;/script&gt;'
+    value='&lt;script src="https://cdn.jsdelivr.net/gh/ncase/nutshell-beta@0.0.3/nutshell.js"&gt;&lt;/script&gt;'
     onclick="this.select();"/>
         <p>
             <b>Step 2:</b> That's it.
         </p>
         <p>
-            (Details on how to write & embed Nutshells are in <a href="try">the interactive demo</a>.
+            (Details on how to write & embed Nutshells are in <a href="try?v=2">the interactive demo</a>.
             Also, when embedding from other pages/sites,
-            make sure <i>both</i> pages have Nutshell installed!)
+            make sure <i>both</i> pages have Nutshell installed!
+            If you're writing directly in HTML, you can see how this page does it itself
+            <a target="_blank" href="https://github.com/ncase/nutshell-beta/blob/main/index.html#L26">on Github</a>.)
         </p>
         <p>
             [TODO: Custom styles,
@@ -77,7 +87,7 @@
 
         <h2>Send me feedback!</h2>
         <p>
-            Try out <a href="try">the interactive demo</a>,
+            Try out <a href="try?v=2">the interactive demo</a>,
             try Nutshell on your sites,
             and let me know how it goes!
             What was your experience reading & writing Nutshells?

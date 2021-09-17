@@ -28,7 +28,7 @@ Nutshell.start = ()=>{
 
 };
 
-window.addEventListener('load', Nutshell.start);
+window.addEventListener('DOMContentLoaded', Nutshell.start);
 
 // Adding an article - ONLY store the raw HTML:
 // Give the URL it's associated with, and the raw HTML
