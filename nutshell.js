@@ -452,7 +452,7 @@ Nutshell._replaceStringBetween = function(str, i, len, insert) {
         overflow:hidden;
         font-weight:normal;
         font-style:normal;
-        padding-bottom: 25px;
+        padding-bottom: 0.5em;
     }
     .nutshell-content[animating=no]{
         height:auto;
@@ -506,18 +506,17 @@ Nutshell._replaceStringBetween = function(str, i, len, insert) {
 
         cursor: pointer;
 
-        font-size: 20px;
-        font-weight: 100;
-        line-height: 40px;
-
-        opacity: 0.33;
-
         position: absolute;
         width:100%;
         right: 0;
         bottom: 0;
         text-align:center;
 
+        font-size: 0.8em;
+        line-height: 2em;
+        font-weight: 100;
+
+        opacity: 0.33;
         transition: opacity 0.2s;
 
     }
