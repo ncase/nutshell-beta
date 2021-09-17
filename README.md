@@ -6,8 +6,9 @@ Stuff To Do?
 * Fine-tuned choosing of text to snippet:
     * Choose # of paragraphs before & after a snippet
     * Choose paragraph based on snippet of text. (use Chrome text fragment API?)
+    * If no #Header specified at all, grab first chunk of paragraphs
 * Test on mobile
-* Out-of-the-box integration with Wordpress, Tumblr, the main blog sites?
+* Out-of-the-box integration with Wordpress, Tumblr, the main bloggin' sites?
 * Customizeable...
     * Style for buttons (e.g. underline instead of "bubble")
     * Language
@@ -20,5 +21,6 @@ Stuff To Do?
 * Embed option in a Nutshell bubble
 * Embed/Link options for headers
 * Subtle animation bugs
+* Actually bother versioning Nutshell.js via jsdelivr's CDN
 
 Got more suggestions, or bug reports? Ping me!

@@ -220,7 +220,7 @@ Nutshell.turnLinksToNutshells = (el, baseURL, makeAllBlank)=>{
         // Close bubble
         let closeBubble = document.createElement("div");
         closeBubble.className = "nutshell-close";
-        closeBubble.innerHTML = "X";
+        closeBubble.innerHTML = "✕";
         bubble.appendChild(closeBubble);
 
         // Get fontsize in px...
@@ -232,7 +232,8 @@ Nutshell.turnLinksToNutshells = (el, baseURL, makeAllBlank)=>{
             if(_IS_EXPANDED){
 
                 // SHRINK
-                bubbleContent.style.height = Math.round(bubbleContent.getBoundingClientRect().height) + "px";
+                let bounds = bubbleContent.getBoundingClientRect();
+                bubbleContent.style.height = Math.round(bounds.height) + "px";
                 bubbleContent.setAttribute("animating","close");
                 setTimeout(()=>{
                     bubbleContent.style.height = '0px';
@@ -242,6 +243,14 @@ Nutshell.turnLinksToNutshells = (el, baseURL, makeAllBlank)=>{
                         bubbleContent.innerHTML = '';
                     },300);
                 },10);
+
+                // ScrollTo if outta bounds!
+                if(bounds.top<0){
+                    window.scrollTo({
+                        top: window.scrollY + bounds.top - fontsize*3,
+                        behavior: 'smooth'
+                    });
+                }
 
             }else{
 
@@ -385,7 +394,7 @@ Nutshell._findArticleInDOM = (el)=>{
     let article, p;
     if(article = el.querySelector("article")) return article;
     if(p = el.querySelector("p")) return el.querySelector("p").parentNode;
-    alert("OK HI WHATEVER YOU'RE TRYING TO INCLUDE DOESN'T HAVE <article> OR <p> TAGS IN IT, THAT'S REALLY WEIRD."); 
+    alert("OK HI WHATEVER YOU'RE TRYING TO INCLUDE DOESN'T HAVE <article> OR <p> TAGS IN IT, THAT'S REALLY WEIRD.");
 };
 Nutshell._replaceStringBetween = function(str, i, len, insert) {
     return str.substring(0,i) + insert + str.substring(i+len);
@@ -442,7 +451,8 @@ Nutshell._replaceStringBetween = function(str, i, len, insert) {
     .nutshell-content{
         overflow:hidden;
         font-weight:normal;
-        font-style:normal:
+        font-style:normal;
+        padding-bottom: 25px;
     }
     .nutshell-content[animating=no]{
         height:auto;
@@ -493,9 +503,26 @@ Nutshell._replaceStringBetween = function(str, i, len, insert) {
         margin-left: -11px;
     }
     .nutshell-bubble .nutshell-close{
+
+        cursor: pointer;
+
+        font-size: 20px;
+        font-weight: 100;
+        line-height: 40px;
+
+        opacity: 0.33;
+
         position: absolute;
-        bottom: 0;
+        width:100%;
         right: 0;
+        bottom: 0;
+        text-align:center;
+
+        transition: opacity 0.2s;
+
+    }
+    .nutshell-bubble .nutshell-close:hover{
+        opacity: 1;
     }
 
     .nutshell-credit{
