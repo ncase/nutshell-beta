@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Let's Try Nutshell! [WIP]</title>
+    <base target="_blank"/>
+    <style>
+    html,body{
+        margin:0;
+        width:100%;
+        height:100%;
+    }
+    body{
+        font-family: Helvetica, Arial, sans-serif;
+        color: #111;
+        font-size: 18px;
+        line-height: 1.7em;
+    }
+    #markdown{
+        display: block;
+        width: calc(50% - 40px);
+        height: calc(100% - 120px);
+        float: right;
+        position: fixed;
+        right: 20px;
+        top: 90px;
+    }
+    #instructions{
+        line-height: 1.2em;
+        text-align: left;
+        position: fixed;
+        left: calc(50% + 10px);
+        top: 30px;
+    }
+    #rendered{
+        display: block;
+        width: calc(50% - 40px);
+        margin-left: 20px;
+        float:left;
+        position: relative;
+        margin-top: 5px;
+    }
+    </style>
+
+    <script src="../nutshell.js"></script>
+
+</head>
+<body>
+<div style="width:50%;height:100%;position:fixed;right:0;background:#eee"></div>
+<div id="instructions">
+    👇 Write your article below (in <a href="https://www.markdownguide.org/cheat-sheet/">Markdown</a>)<br>
+    👈 and see how it looks with Nutshell on the left!
+</div>
+<textarea id="markdown" style="resize:none;" autocomplete="off">
+# Write A Nutshell...
+
+by typing stuff under a header
+
+# Then Embed It By...
+
+1. Making a
+[:link whose text starts with a colon](#WriteANutshell)
+(the colon's removed in the button, but you can see it in the original Markdown on the right). Then...
+
+2. Linking to the #HeaderName - in this case, #WriteANutshell. (Capitalization, punctuation and spaces don't matter)
+
+You can also embed Nutshells from
+[:other pages](../#recursion)
+and
+[:other websites](https://blog.ncase.me/explorable-explanations/#Procedural-Rhetoric),
+even from different authors or stuff written long ago, as long as both pages have the Nutshell script installed.
+</textarea>
+<div id="rendered"></div>
+</body>
+</html>
+
+<script src="marked.js"></script>
+<script>
+    let rendered = document.querySelector('#rendered'),
+        markdown = document.querySelector('#markdown');
+    let render = ()=>{
+        rendered.innerHTML = marked(markdown.value);
+        Nutshell.start();
+    }
+    markdown.oninput = render;
+    render();
+</script>

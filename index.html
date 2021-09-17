@@ -1,0 +1,347 @@
+<!doctype>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Nutshell! (BETA)</title>
+    <link href="index.css" rel="stylesheet">
+</head>
+<body>
+    <div id="content">
+
+        <h1>🥜 Nutshell (BETA)</h1>
+
+        <div id="instruction">click this! 👇</div>
+        <p style="font-size:35px; margin-top:71px; margin-bottom:20px;">
+            What is <a href="#nutshell">:Nutshell</a>?
+        </p>
+        <p>
+            Hi! You're invited to try out the Nutshell beta!
+            Feel free to try it out on your websites/blogs,
+            and send me your feedback via however I contacted you.
+            I'll credit you as a beta-tester when Nutshell "officially" launches. :)
+        </p>
+
+        <hr>
+
+        <h2>What can I do with Nutshell?</h2>
+
+        <ul>
+            <li>
+                You can embed "expandable explanations" from
+                other pages, websites, and authors,
+                even if they were already written long ago!
+                <a href="https://blog.ncase.me/explorable-explanations/#Procedural-Rhetoric">:Example</a>
+            </li>
+            <li>
+                Your Nutshells can also have
+                audio, video, and interactive shtuff.
+                (But don't worry, Nutshell stays safe by sanitizing HTML and sandboxing iframes)
+                <a href="malicious.html#Interactive">:Example</a>
+            </li>
+            <li>
+                [TODO: Support for embedding Wikipedia introductions, YouTube, and LaTeX]
+            </li>
+        </ul>
+
+        <h2>How can I use Nutshell in my site?</h2>
+
+        <p>
+            First, if you'd like, try it out online with <a href="try">this interactive demo!</a>
+            (This demo uses Markdown, but you can use Nutshell with any word-editor you like,
+            or directly in HTML)
+        </p>
+        <p>
+            <img src="pics/editor.gif" width="500" style="border: 1px solid #ddd;">
+        </p>
+        <p>
+            If you liked that, here's how you install Nutshell...
+        </p>
+        <p>
+            <b>Step 1:</b> Put this in a page's &lt;head&gt;:
+        </p>
+<code style="background:#333; color:#fff; border-radius: 2px; padding:2px 5px;">
+&lt;script src="nutshell.js"&gt;&lt;/script&gt;
+</code>
+        <p>
+            <b>Step 2:</b> That's it.
+        </p>
+        <p>
+            Details on how to write & embed Nutshells are in <a href="try">the interactive demo</a>.
+            But to recap:
+        </p>
+        <p>
+            To write a Nutshell: use a header to mark a section.
+        </p>
+        <p>
+            To embed a Nutshell:
+            make a link whose text starts with a
+            <span style="color:#00e; text-decoration:underline; cursor:pointer;">:colon</span>,
+            so the script knows to convert it to a Nutshell.
+            If you're embedding from another website,
+            link to <code>other.site/page#HeaderName</code>.
+            If same website but different page,
+            <code>page#HeaderName</code>.
+            If same page, just <code>#HeaderName</code>.
+        </p>
+        <p>
+            (When embedding from other pages/sites, make sure <i>both</i> pages have Nutshell installed!)
+        </p>
+        <p>
+            [TODO: Custom styles,
+            fine-tuning what text to embed,
+            easier Wordpress/Tumblr support?]
+        </p>
+
+        <h2>Send me feedback!</h2>
+        <p>
+            Try out <a href="try">the interactive demo</a>,
+            try Nutshell on your websites/blogs,
+            and let me know how it goes!
+            What was your experience reading & writing Nutshells?
+            What did you like and not like?
+            Bugs? Security issues? Feature requests?
+            Send 'em all to me via however I pinged you,
+            and I'll credit you as an early tester.
+        </p>
+        <p>
+            Thank you for helping me bring Nutshell to life!
+        </p>
+        <p>
+            P.S: Here's the open-source code for "Nutshell Beta"!
+        </p>
+
+        <span style="display:none">
+
+            <h2>Nutshell</h2>
+
+                <p>
+                    Nutshell lets you put "expandable explanations" in your writing, like this!
+                    You can even make these explanations <a href="#recursion">:recursive</a>.
+                </p>
+
+                <p>
+                    Why do this? Well, if you were to explain something to me <i>in-person</i>,
+                    I can ask "wait, what's that word mean", "could you break down that idea",
+                    "tell me more!", etc.
+                    But by default, writing is one-size-fits-all.
+                    Nutshell doesn't solve that <i>completely</i>, but it lets your reader
+                    tailor your writing &mdash; a lil' bit &mdash; to <i>their</i> prior knowledge, interests, and curiosity.
+                </p>
+
+                <p>
+                    (Why not just use links?
+                    Because those break the flow of reading,
+                    and your reader usually doesn't need
+                    <i>everything</i> in that link, just a section.
+                    Nutshell lets you embed "just a section",
+                    and if you <a href="#flow">:click this Nutshell</a>,
+                    you can see how it also preserves flow of reading!)
+                </p>
+
+                <p>
+                    <b><a href="#Nutshell 2">:🎉 BUT WAIT, THERE'S MORE 🎉</a></b>
+                </p>
+
+            <h2>Flow</h2>
+
+                <p>
+                    As you can see, Nutshell stays <i>in</i> the writing,
+                    keeping the reading flow from top-to-bottom.
+                </p>
+
+                <p>
+                    Even better, when a Nutshell interrupts a sentence like this,
+                    the sentence will be "recapped" afterwards,
+                    so you can get back on the main train of thought!
+                </p>
+
+            <h2>Nutshell 2</h2>
+
+                <p>
+                    You don't have to write all these Nutshells from scratch!
+                    You can embed Nutshells from other pages, other websites, other authors –
+                    <i>even if they were already written long ago!</i>
+                </p>
+
+                <p>
+                    This means you can easily build upon your old ideas & explanations,
+                    without having to repeat yourself or break the flow of reading with links.
+                    But more importantly, this means you can build upon <i>others'</i> ideas & explanations,
+                    and others can build upon yours.
+                </p>
+
+                <p>Bite-sized, yet nutritious. Let's get cracking with Nutshells!</p>
+
+            <h2>Recursion</h2>
+
+                <p><img src="pics/recursion.png" width="600"/></p>
+
+                <p>Recursion is when something contains a copy of itself. It's used frequently in math & programming, to get infinite potential out of finite stuff.</p>
+
+                <p>See also: <a href="#recursion">:recursion</a></p>
+
+        </span>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+        <p>What is <a href="#what-is-nutshell">:Nutshell</a>?</p>
+
+        <p><a href="#why-nutshell">:Why use Nutshell?</a></p>
+
+        <p><a href="#try">:How can I try Nutshell online?</a></p>
+
+        <p><a href="#whodidthis">:Who did this</a></p>
+
+        <p><a href="http://localhost:8200/test.html#foobar">:TEST 1</a></p>
+        <p><a href="http://localhost:8200/test.html#testnut">:TEST 2</a></p>
+        <p><a href="http://localhost:8200/test.html#epi">:EPI</a></p>
+
+        <span style="display:none">
+            <hr>
+
+            <h2>What is Nutshell</h2>
+
+            <p>
+                Nutshell lets you put "expandable explanations" in your writing, like this!
+                You can even make these explanations <a href="#recursion">:recursive</a>.
+            </p>
+
+            <p>
+                Nutshells can be re-used across pages, websites, and authors.
+                You don't need even to write new content –
+                articles from the past can <em>already</em> be embedded as Nutshells!
+                (For example, here's
+                <a href="https://blog.ncase.me/back-to-the-future-with-rss/#HowdoesRSSwork">:a section from an old blog post.</a>)
+            </p>
+
+            <p>Bite-sized, yet nutritious. Let's get cracking with Nutshells!</p>
+
+            <h2>Why Nutshell</h2>
+
+            <p>Why put "expandable explanations" in your writing?</p>
+
+            <ol>
+            <li>
+                So your reader can get the background information they need –
+                just-in-time, not just-in-case –
+                all without:
+                a) you re-explaining the basics for every article, or
+                b) your reader breaking the flow of reading by clicking a link to <em>yet another</em> article.
+            </li>
+            <li>So your reader can tailor your article to <em>their</em> interests, and choose what they want to learn in-depth.</li>
+            <li>So you can build upon your old ideas & explanations – again, without re-explaining or breaking the flow of reading.</li>
+            <li>So you can build upon <em>others'</em> great explanations, and vice versa! Imagine Wikipedia, if Wikipedia was <a href="#decentralization">:decentralized, not merely 'democratized'</a> and <a href="#WikipediasProblem">:actually good at explaining things to beginners</a>.</li>
+            </ol>
+
+            <h2>Try</h2>
+
+            <p><img src="pics/editor.gif" alt=""></p>
+
+            <p style="font-size: 50px; margin-top: 30px; margin-left: 20px;">
+                <b><a href="try" target="_self">Let's Try Nutshell! 🥜</a></b>
+            </p>
+
+            <h2>Who did this</h2>
+
+            <p>Nutshell was made by <a href="https://ncase.me/">Nicky Case</a>, with the generous support of my Patreon backers!</p>
+
+            <p>[Insert supporter names, once this isn't a Work-In-Progress anymore!]</p>
+
+            <p>
+                Special Thanks to <a href="https://spacie.me/">Spacie</a>,
+                who I commissioned to code the first version of Nutshell,
+                before its entire design got rebooted. Sorry Spacie.
+            </p>
+
+            <hr>
+
+            <h2>Recursion</h2>
+
+            <p><img src="pics/recursion.png" width="600"/></p>
+
+            <p>Recursion is when something contains a copy of itself. It's used frequently in math & programming, to get infinite potential out of finite stuff.</p>
+
+            <p>See also: <a href="#recursion">:recursion</a></p>
+
+            <h2>Decentralization</h2>
+
+            <p>
+                <b>Centralized</b> networks have a single person/organization at the center.
+                They come in two flavors:
+            </p>
+            <ul>
+                <li>
+                    Command & Control – Orders go from top to bottom.
+                    Think military, schools, or most companies.
+                </li>
+                <li>
+                    Democratic – The "bottom" gets to have a say about who's in top, or what the top does.
+                    Think democracies, or websites with "user-generated content" (social media, YouTube, Wikipedia).
+                </li>
+            </ul>
+            <p>
+                <b>Decentralized</b> networks, on the other hand, <i>have</i> no center.
+                Unlike even democracies, there <i>is no</i> top or bottom.
+                Think old-fashioned local markets, natural human languages, or "peer-to-peer" technologies.
+            </p>
+            <p>
+                Centralized & decentralized systems have different pros & cons.
+                Centralized systems can be more efficient, but prone to abuse of power,
+                because power is concentrated in a "single point of failure".
+                Decentralized systems can be more innovative and resistant to abuse,
+                but can be an inefficient mess.
+            </p>
+            <p>
+                (Note: none of these are well-established technical definitions. I just made them up.)
+            </p>
+
+            <h2>Wikipedia's Problem</h2>
+
+            <p><img src="pics/xkcd.png" alt=""></p>
+
+            <p><i>(from <a href="https://xkcd.com/2501">xkcd</a>)</i></p>
+
+            <p>
+                I love Wikipedia, and I'm a monthly donor...
+                but, well, it's usually edited by experts <em>for</em> experts.
+                So if you're a beginner, you get treated to "introductions" like this:
+            </p>
+
+            <blockquote>
+            <p>Abstract algebra is a part of math which studies algebraic structures. These include: groups, rings, fields, matrices, vector spaces, algebras [...]  </p>
+            </blockquote>
+
+            <p>And that was from the <em>Simple English Wikipedia</em>.</p>
+
+            <p>
+                My hope is that since Nutshell is decentralized,
+                meaning no edit wars over a single page, meaning for-beginner explanations won't
+                get edited over by for-expert explanations...
+                that'll let great explanations survive & thrive.
+            </p>
+
+        </span>
+
+-->
+
+    </div>
+</body>
+</html>
+
+<script src="nutshell.js"></script>
+<script>
+window.onclick = ()=>{
+    document.querySelector("#instruction").style.display='none';
+};
+</script>

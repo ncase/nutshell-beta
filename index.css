@@ -1,0 +1,55 @@
+html,body{
+    margin:0;
+    width:100%;
+    height:100%;
+}
+body{
+    font-family: Helvetica, Arial, sans-serif;
+    color: #111;
+    font-size: 18px;
+    line-height: 1.7em;
+}
+#content{
+    padding: 50px 0;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+#content > h1{
+    font-size: 74px;
+}
+#content > p{
+    /*font-size: 30px;*/
+    line-height: 1.7em;
+}
+#content .nutshell-content{
+    font-size: 18px;
+    line-height: 1.7em;
+}
+li{
+    margin-bottom:1em;
+}
+blockquote{
+    color: #888;
+    font-style: italic;
+    border-left: 2px solid #888;
+    padding-left: 1em;
+}
+hr{
+    border:none;
+    border-top: 2px solid #ddd;
+    margin: 2.2em 0;
+}
+
+#instruction{
+    position:absolute;
+    left: 163px;
+    top: 160px;
+    color:#888;font-size:15px;
+    animation: updown 0.8s linear infinite;
+}
+@keyframes updown {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(7px); }
+    100% { transform: translateY(0); }
+}
